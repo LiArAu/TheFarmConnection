@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">帮我种苹果</string>
+    <string name="whattodo">你今天想干嘛呀</string>
+    <string name="newplants">给农场添加蔬菜</string>
+    <string name="status">我的蔬菜们怎么样了？</string>
+    <string name="visit">我想去农场玩</string>
+</resources>

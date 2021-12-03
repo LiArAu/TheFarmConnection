@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".UploadNewPlant">
+
+    <EditText
+        android:id="@+id/editTextAddTitle"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="Plant Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextAddProvider"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="Provider"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextAddPrice"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="Price $"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextAddDecription"
+        android:layout_width="250dp"
+        android:layout_height="127dp"
+        android:ems="10"
+        android:hint="Short Description"
+        android:inputType="textPersonName" />
+
+    <ImageView
+        android:id="@+id/imageViewAddImage"
+        android:layout_width="247dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Save" />
+
+</LinearLayout>

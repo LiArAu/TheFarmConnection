@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE5C3"
+    android:layout_gravity="center"
+    tools:context=".Dashboard">
+
+    <TextView
+        android:id="@+id/text_whattodo"
+        android:layout_width="336dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="43dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="@string/whattodo"
+        android:textColor="#636A1A"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_visit"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="167dp"
+        android:backgroundTint="#B7C341"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="@string/visit"
+        android:textColor="#636A1A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_status" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="262dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="29dp"
+        android:backgroundTint="#B7C341"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="@string/newplants"
+        android:textColor="#636A1A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_whattodo" />
+
+    <Button
+        android:id="@+id/button_status"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="29dp"
+        android:backgroundTint="#B7C341"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="@string/status"
+        android:textColor="#636A1A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_visit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

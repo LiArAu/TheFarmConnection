@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FarmConnection</string>
+    <string name="whattodo">What do you want to do for today?</string>
+    <string name="newplants">Add new plants</string>
+    <string name="status">How\'s my farm going?</string>
+    <string name="visit">Visit the farm</string>
+    <string name="farmeraddplant">Add</string>
+</resources>
