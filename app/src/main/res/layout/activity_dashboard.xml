@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#EDE5C3"
     android:layout_gravity="center"
-    tools:context=".Dashboard">
+    tools:context=".mainactivities.Dashboard">
 
     <TextView
         android:id="@+id/text_whattodo"

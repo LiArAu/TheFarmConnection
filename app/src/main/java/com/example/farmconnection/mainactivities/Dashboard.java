@@ -1,4 +1,4 @@
-package com.example.farmconnection;
+package com.example.farmconnection.mainactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+
+import com.example.farmconnection.R;
 
 public class Dashboard extends AppCompatActivity {
     Button addnew, status, visit;
@@ -20,10 +22,27 @@ public class Dashboard extends AppCompatActivity {
         addnew = findViewById(R.id.button_add);
         status = findViewById(R.id.button_status);
         visit = findViewById(R.id.button_visit);
+
         addnew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), SelectNewPlants_database_version.class);
+                Intent i = new Intent(getApplicationContext(), SelectNewPlants.class);
+                startActivity(i);
+            }
+        });
+
+        status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), CheckCurrentPlants.class);
+                startActivity(i);
+            }
+        });
+
+        visit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Dashboard.this, MakeAppointment.class);
                 startActivity(i);
             }
         });

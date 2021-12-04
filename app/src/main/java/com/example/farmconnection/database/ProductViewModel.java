@@ -1,4 +1,4 @@
-package com.example.farmconnection;
+package com.example.farmconnection.database;
 import android.app.Application;
 
 import androidx.annotation.NonNull;

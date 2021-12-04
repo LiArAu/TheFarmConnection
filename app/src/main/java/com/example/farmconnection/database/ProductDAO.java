@@ -1,4 +1,4 @@
-package com.example.farmconnection;
+package com.example.farmconnection.database;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

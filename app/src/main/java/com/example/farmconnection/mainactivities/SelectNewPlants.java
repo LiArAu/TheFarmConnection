@@ -1,4 +1,4 @@
-package com.example.farmconnection;
+package com.example.farmconnection.mainactivities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,11 +15,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.farmconnection.detailactivities.ProductDetailModel;
+import com.example.farmconnection.R;
+import com.example.farmconnection.adapters.RecyclerAdapter;
+import com.example.farmconnection.detailactivities.UploadNewPlant;
+import com.example.farmconnection.database.Product;
+import com.example.farmconnection.database.ProductViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
-public class SelectNewPlants_database_version extends AppCompatActivity {
+public class SelectNewPlants extends AppCompatActivity {
     private ProductViewModel pvm;
     private FloatingActionButton fab;
 
@@ -34,11 +40,11 @@ public class SelectNewPlants_database_version extends AppCompatActivity {
         RecyclerAdapter ra = new RecyclerAdapter();
 
         rv.setHasFixedSize(true);
-        rv.setLayoutManager(new GridLayoutManager(SelectNewPlants_database_version.this,2));
+        rv.setLayoutManager(new GridLayoutManager(SelectNewPlants.this,2));
         rv.setAdapter(ra);
 
         pvm = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(ProductViewModel.class);
-        pvm.getAllProducts().observe(SelectNewPlants_database_version.this, new Observer<List<Product>>() {
+        pvm.getAllProducts().observe(SelectNewPlants.this, new Observer<List<Product>>() {
             @Override
             public void onChanged(List<Product> products) {
                 // update Recycler View
@@ -57,14 +63,14 @@ public class SelectNewPlants_database_version extends AppCompatActivity {
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 //get the position we want to delete
                 pvm.delete(ra.getProducts(viewHolder.getAdapterPosition()));
-                Toast.makeText(SelectNewPlants_database_version.this, "Plant has been deleted!", Toast.LENGTH_LONG).show();
+                Toast.makeText(SelectNewPlants.this, "Plant has been deleted!", Toast.LENGTH_LONG).show();
             }
         }).attachToRecyclerView(rv);
 
         ra.setOnItemClickListener(new RecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Product product) {
-                Intent intent2 = new Intent(SelectNewPlants_database_version.this, ProductDetailModel.class);
+                Intent intent2 = new Intent(SelectNewPlants.this, ProductDetailModel.class);
                 intent2.putExtra("title",product.getTitle());
                 intent2.putExtra("content",product.getContent());
                 intent2.putExtra("provider",product.getProvider());
@@ -78,7 +84,7 @@ public class SelectNewPlants_database_version extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SelectNewPlants_database_version.this, UploadNewPlant.class);
+                Intent intent = new Intent(SelectNewPlants.this, UploadNewPlant.class);
                 startActivityForResult(intent, 1);
             }
         });

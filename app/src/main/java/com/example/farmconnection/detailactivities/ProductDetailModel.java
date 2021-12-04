@@ -1,15 +1,17 @@
-package com.example.farmconnection;
+package com.example.farmconnection.detailactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.farmconnection.R;
+import com.example.farmconnection.mainactivities.SelectNewPlants;
 
 public class ProductDetailModel extends AppCompatActivity {
     TextView title, provider, price, description;
@@ -26,6 +28,8 @@ public class ProductDetailModel extends AppCompatActivity {
         price = findViewById(R.id.detailprice);
         description = findViewById(R.id.detaildescription);
         image = findViewById(R.id.detailimage);
+        buy = findViewById(R.id.buttonbuy);
+        goback = findViewById(R.id.buttongoback);
 
         Intent intent = getIntent();
         title.setText(intent.getStringExtra("title"));
@@ -38,7 +42,15 @@ public class ProductDetailModel extends AppCompatActivity {
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ProductDetailModel.this, SelectNewPlants_database_version.class);
+                Intent i = new Intent(getApplicationContext(), SelectNewPlants.class);
+                startActivity(i);
+            }
+        });
+
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Payment.class);
                 startActivity(i);
             }
         });

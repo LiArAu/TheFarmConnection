@@ -1,11 +1,6 @@
-package com.example.farmconnection;
+package com.example.farmconnection.database;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.ImageDecoder;
 import android.os.AsyncTask;
-import android.os.Build;
-import android.provider.MediaStore;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
@@ -14,9 +9,7 @@ import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.nio.ByteBuffer;
+import com.example.farmconnection.R;
 
 
 @Database(entities = Product.class, version = 3)

@@ -3,7 +3,7 @@
     package="com.example.farmconnection">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,21 +13,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmConnection">
         <activity
-            android:name=".UploadNewPlant"
-            android:exported="false" />
+            android:name=".mainactivities.MakeAppointment"
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
         <activity
-            android:name=".ProductDetailModel"
-            android:exported="false" />
+            android:name=".detailactivities.ViewImage"
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
         <activity
-            android:name=".SelectNewPlants_database_version"
+            android:name=".detailactivities.FarmerMessages"
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".detailactivities.Payment"
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".detailactivities.UploadNewPlant"
             android:exported="false"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Dashboard"
+            android:name=".detailactivities.ProductDetailModel"
             android:exported="false"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".MainActivity"
+            android:name=".mainactivities.SelectNewPlants"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".mainactivities.Dashboard"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".mainactivities.CheckCurrentPlants"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".mainactivities.SplashPage"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>

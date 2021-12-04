@@ -1,4 +1,4 @@
-package com.example.farmconnection;
+package com.example.farmconnection.detailactivities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +20,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.farmconnection.R;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
@@ -36,7 +38,6 @@ public class UploadNewPlant extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Add Image");
         setContentView(R.layout.activity_upload_new_plant);
 
         editTextAddTitle = findViewById(R.id.editTextAddTitle);
@@ -93,6 +94,7 @@ public class UploadNewPlant extends AppCompatActivity {
                     intent.putExtra("image",image);
                     setResult(RESULT_OK,intent);
                     finish();
+                    Toast.makeText(UploadNewPlant.this, "Your plant is added!", Toast.LENGTH_LONG).show();
                 }
 
             }

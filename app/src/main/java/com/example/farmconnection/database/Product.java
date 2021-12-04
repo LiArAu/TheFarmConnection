@@ -1,4 +1,4 @@
-package com.example.farmconnection;
+package com.example.farmconnection.database;
 import android.graphics.Bitmap;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

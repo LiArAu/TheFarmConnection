@@ -1,4 +1,4 @@
-package com.example.farmconnection;
+package com.example.farmconnection.mainactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.farmconnection.R;
+
+public class SplashPage extends AppCompatActivity {
 
     private static int splash_screen = 5000;
 
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(MainActivity.this, Dashboard.class);
+                Intent i = new Intent(SplashPage.this, Dashboard.class);
                 startActivity(i);
                 finish(); // won't go back to this page.
             }

@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#EDE5C3</color>
     <color name="black_overlay">#66000000</color>
+    <color name="green">#FFCAE1B0</color>
 </resources>

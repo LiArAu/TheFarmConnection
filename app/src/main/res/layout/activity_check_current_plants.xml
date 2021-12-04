@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainactivities.CheckCurrentPlants">
+
+    <Button
+        android:id="@+id/buttonappointment"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:background="@color/green"
+        android:text="I want to go to the farm!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonvideo" />
+
+    <Button
+        android:id="@+id/buttonvideo"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@color/green"
+        android:text="Recent Videos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonpicture" />
+
+    <Button
+        android:id="@+id/buttonmessage"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp"
+        android:background="@color/green"
+        android:text="Message from farmers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonpicture"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@color/green"
+        android:text="Recent Pictures"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonmessage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

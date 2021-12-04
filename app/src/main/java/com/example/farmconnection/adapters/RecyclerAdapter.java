@@ -1,8 +1,6 @@
-package com.example.farmconnection;
+package com.example.farmconnection.adapters;
 
-import android.content.Intent;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.farmconnection.R;
+import com.example.farmconnection.database.Product;
 
 import java.util.ArrayList;
 import java.util.List;
